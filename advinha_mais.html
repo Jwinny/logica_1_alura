@@ -1,0 +1,21 @@
+<meta charset="UTF-8">
+<input>
+<button>Dê seu palpite</button>
+<script>
+    function testa(){
+        if(input.value==sorteio){
+            alert("Você acertou, o numero era "+sorteio);
+        }
+        else{
+            alert("Você Errou!!!");
+        }
+        input.value="";
+        input.focus();
+    }
+    let sorteio=Math.round(Math.random()*10);
+    let input=document.querySelector("input");
+    input.focus();
+    let button=document.querySelector("button");
+    button.onclick=testa;
+
+</script>

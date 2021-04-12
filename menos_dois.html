@@ -1,0 +1,18 @@
+<meta charset="UTF-8">
+<script>
+    function pulaLinha(){
+        document.write("<br><br>");
+    }
+    function mostra(texto){
+        document.write(texto);
+        pulaLinha();
+    }
+    let i=30;
+    let fim=40;
+    while(i<=fim){
+        if(i!=33 && i!=37){
+            mostra(i);
+        }
+        i+=1;
+    }
+</script>

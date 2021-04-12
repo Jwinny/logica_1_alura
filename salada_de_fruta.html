@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+
+<h1>Receitas do Yan</h1>
+
+<script>
+    var ingredientes = [];
+
+    var quantidade = parseInt(prompt("Quantos ingredientes você vai adicionar?"));
+
+    var contador = 1;
+
+    while( contador <= quantidade) {
+        let igual=false;
+        var ingrediente = prompt("Informe o ingrediente " + contador);
+        for(let i=0;i<ingredientes.length;i++){
+            if(ingrediente==ingredientes[i]){
+                alert("Você já informou esse ingrediente");
+                igual=true;
+                break;
+            }
+        }
+        if(igual==false){
+            ingredientes.push(ingrediente);
+            contador++;
+        }
+    }
+
+    console.log(ingredientes);
+</script>

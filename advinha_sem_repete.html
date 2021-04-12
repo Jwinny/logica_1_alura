@@ -1,0 +1,48 @@
+<meta charset="UTF-8">
+<input>
+<button>Dê seu palpite</button>
+<script>
+    function testa(){
+        let achou=false;
+        for(let i=0;i<sorteios.length;i++){
+            if(input.value==sorteios[i]){
+                alert("Você acertou!!!");
+                achou=true;
+                break;
+            }
+        }
+        if(achou==false){
+            alert("Você Errou!!!");
+        }
+        input.value="";
+        input.focus();
+    }
+    function sorteia(quantidade){
+        let result=[];
+        let i=0;
+        while(i<quantidade){
+                let repetiu=false;
+                let numero = Math.round(Math.random()*10);
+                if(numero!=0){
+                    for(let j=0;j<result.length;j++){
+                        if(numero==result[j]){
+                            repetiu=true;
+                            break;
+                        }
+                    }
+                    if(repetiu==false){
+                        result.push(numero);
+                        i++;
+                    }
+                }
+        }
+        return result;
+    }
+    let sorteios=sorteia(4);
+    console.log(sorteios);
+    let input=document.querySelector("input");
+    input.focus();
+    let button=document.querySelector("button");
+    button.onclick=testa;
+
+</script>

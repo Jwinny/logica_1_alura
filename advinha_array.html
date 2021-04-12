@@ -1,0 +1,27 @@
+<meta charset="UTF-8">
+<input>
+<button>Dê seu palpite</button>
+<script>
+    function testa(){
+        let achou=false;
+        for(let i=0;i<sorteios.length;i++){
+            if(input.value==sorteios[i]){
+                alert("Você acertou!!!");
+                achou=true;
+                break;
+            }
+        }
+        if(achou==false){
+            alert("Você Errou!!!");
+        }
+        input.value="";
+        input.focus();
+    }
+
+    let sorteios=[1,3,6,2];
+    let input=document.querySelector("input");
+    input.focus();
+    let button=document.querySelector("button");
+    button.onclick=testa;
+
+</script>

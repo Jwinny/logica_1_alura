@@ -1,0 +1,15 @@
+<meta charset="UTF-8">
+<script>
+    function pulaLinha(){
+        document.write("<br>");
+    }
+    function mostra(frase){
+        document.write(frase);
+        pulaLinha();
+    }
+    let anoAtual = 2021;
+    let anoCol = 1500;
+    let geracao = 28;
+    let result = Math.round((anoAtual-anoCol)/28);
+    mostra("O numero de gerações desde a coloniação brasileira é aproximadamente: "+result);
+</script>
